@@ -1,0 +1,12 @@
+---
+# tasks file for apach
+- name: install packages
+  apt:
+      name: "{{ item }}"
+      state: present
+  loop:
+    - "certbot"
+    - "apache2"
+    - "ssl-cert"
+    - "python-certbot-apache"
+
